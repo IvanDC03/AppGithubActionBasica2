@@ -16,7 +16,8 @@ pipeline {
         
         stage('Build') {
             steps {
-                // Aquí puedes agregar el comando de compilación de tu proyecto
+                sh 'npm install'
+                sh 'npm run build'
                 echo 'Building the project...'
                 // Por ejemplo, si usas Maven:
                 // sh 'mvn clean install'
@@ -34,10 +35,10 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Aquí agregas el comando de despliegue
+                withCredentials([string(credentialsId: 'vercel-token', variable: 'VERCEL_TOKEN')]) {
+                sh 'vercel --token $YFhmAH93eCTs5nz3iAHgkbAF --prod --yes'
                 echo 'Deploying the project...'
-                // Por ejemplo, si usas Docker:
-                // sh 'docker-compose up -d'
+                
             }
         }
     }
