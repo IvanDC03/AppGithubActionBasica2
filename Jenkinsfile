@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/IvanDC03/AppGithubActionBasica2.git', credentialsId: 'a3600eab-6fd0-44b2-8429-2243902a69e0'
+                git branch: 'main', url: 'https://github.com/IvanDC03/AppGithubActionBasica2.git', credentialsId: 'a3600eab-6fd0-44b2-8429-2243902a69e0'
             }
         }
         
