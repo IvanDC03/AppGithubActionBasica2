@@ -7,7 +7,7 @@
     "underscore": "^1.12.1"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node test.js",
     "build": "echo 'No build step defined'",
     "test": "echo 'Running tests...'"
   },
