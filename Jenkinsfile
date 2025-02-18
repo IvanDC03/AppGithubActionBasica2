@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Aquí se hace el checkout del repositorio de GitHub
-                git url: "https://github.com/IvanDC03/AppGithubActionBasica2.git", credentialsId: 'a3600eab-6fd0-44b2-8429-2243902a69e0'
+                git url: 'https://github.com/IvanDC03/AppGithubActionBasica2.git', credentialsId: 'a3600eab-6fd0-44b2-8429-2243902a69e0'
             }
         }
         
@@ -54,4 +54,5 @@ pipeline {
             echo 'Pipeline failed!'
         }
     }
+}
 }
